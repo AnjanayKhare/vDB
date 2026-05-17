@@ -17,6 +17,19 @@ impl Logger<'_> {
     }
 
     pub fn info(&self, data: &str){
-        println!("[{}] [{}] : {}",Self::get_formated_time(), &self.module_name, data)
+        println!("[{}] [INFO] [{}] : {}",Self::get_formated_time(), &self.module_name, data)
     }
+    
+    pub fn warn(&self, data: &str){
+        println!("[{}] [WARN] [{}] : {}",Self::get_formated_time(), &self.module_name, data)
+    }
+    
+    pub fn error(&self, data: &str){
+        println!("[{}] [ERROR] [{}] : {}",Self::get_formated_time(), &self.module_name, data)
+    }
+    
+    pub fn debug(&self, data: &str){
+        println!("[{}] [ERROR] [{}] : {}",Self::get_formated_time(), &self.module_name, data)
+    }
+    
 }
